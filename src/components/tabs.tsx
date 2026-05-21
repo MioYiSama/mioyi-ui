@@ -3,16 +3,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { splitProps, type ComponentProps } from "solid-js";
 import { cn } from "../lib/cn";
 
-const tabsRootVariants = cva("text-foreground flex w-full flex-col gap-3");
+const tabsRootVariants = cva("text-foreground flex w-full flex-col gap-4");
 const tabsListVariants = cva(
-  "bg-muted text-muted-foreground inline-flex w-fit items-center rounded-md p-1",
+  "border-border bg-muted text-muted-foreground inline-flex w-fit items-center gap-1 rounded-lg border p-1 shadow-sm",
 );
 const tabsTriggerVariants = cva(
   [
-    "inline-flex items-center justify-center rounded-sm px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-colors outline-none",
-    "data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm",
+    "text-muted-foreground inline-flex cursor-pointer appearance-none items-center justify-center rounded-md border border-transparent bg-transparent px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-colors outline-none",
+    "enabled:hover:bg-background/70 enabled:hover:text-foreground",
+    "data-[selected]:border-border data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm",
     "data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-background data-[focus-visible]:ring-2 data-[focus-visible]:ring-offset-2",
-    "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+    "disabled:cursor-not-allowed disabled:opacity-50 data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
   ],
   {
     defaultVariants: {

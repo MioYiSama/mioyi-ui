@@ -76,3 +76,45 @@ export function Example() {
     </div>
   ),
 };
+
+export const Disabled: Story = {
+  parameters: {
+    docs: {
+      source: {
+        code: `import { Button } from "mioyi-ui";
+import "mioyi-ui/styles.css";
+
+export function Example() {
+  return (
+    <div class="flex flex-wrap items-center gap-3">
+      <Button disabled>Default</Button>
+      <Button disabled variant="secondary">Secondary</Button>
+      <Button disabled variant="outline">Outline</Button>
+      <Button disabled variant="ghost">Ghost</Button>
+      <Button disabled variant="destructive">Destructive</Button>
+    </div>
+  );
+}`,
+        language: "tsx",
+        type: "code",
+      },
+    },
+  },
+  render: () => (
+    <div class="flex flex-wrap items-center gap-3">
+      <Button disabled>Default</Button>
+      <Button disabled variant="secondary">
+        Secondary
+      </Button>
+      <Button disabled variant="outline">
+        Outline
+      </Button>
+      <Button disabled variant="ghost">
+        Ghost
+      </Button>
+      <Button disabled variant="destructive">
+        Destructive
+      </Button>
+    </div>
+  ),
+};

@@ -6,7 +6,7 @@ const buttonVariants = cva(
   [
     "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-md border border-transparent text-sm font-medium whitespace-nowrap transition-colors outline-none",
     "focus-visible:ring-ring focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-offset-2",
-    "disabled:pointer-events-none disabled:opacity-50",
+    "disabled:cursor-not-allowed disabled:opacity-50",
     "[&>svg]:size-4 [&>svg]:shrink-0",
   ],
   {
@@ -22,12 +22,12 @@ const buttonVariants = cva(
         sm: "h-8 px-3 text-xs",
       },
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        ghost: "text-foreground hover:bg-accent hover:text-accent-foreground",
+        default: "bg-primary text-primary-foreground enabled:hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground enabled:hover:bg-destructive/90",
+        ghost: "text-primary enabled:hover:bg-primary/10 enabled:hover:text-primary bg-transparent",
         outline:
-          "border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "border-border text-foreground enabled:hover:bg-accent enabled:hover:text-accent-foreground bg-transparent",
+        secondary: "bg-secondary text-secondary-foreground enabled:hover:bg-secondary/80",
       },
     },
   },

@@ -90,13 +90,13 @@ export function Example() {
         <Tabs.Trigger value="code">Code</Tabs.Trigger>
         <Tabs.Trigger value="tokens">Tokens</Tabs.Trigger>
       </Tabs.List>
-      <Tabs.Content value="preview" class="rounded-md border border-border p-4">
+      <Tabs.Content value="preview" class="rounded-lg border border-border bg-card p-4 text-sm leading-6 shadow-sm">
         Components use semantic CSS variables.
       </Tabs.Content>
-      <Tabs.Content value="code" class="rounded-md border border-border p-4">
+      <Tabs.Content value="code" class="rounded-lg border border-border bg-card p-4 text-sm leading-6 shadow-sm">
         Variant classes are generated with CVA.
       </Tabs.Content>
-      <Tabs.Content value="tokens" class="rounded-md border border-border p-4">
+      <Tabs.Content value="tokens" class="rounded-lg border border-border bg-card p-4 text-sm leading-6 shadow-sm">
         Override the --mioyi-* variables in your app.
       </Tabs.Content>
     </Tabs.Root>
@@ -114,13 +114,22 @@ export function Example() {
         <Tabs.Trigger value="code">Code</Tabs.Trigger>
         <Tabs.Trigger value="tokens">Tokens</Tabs.Trigger>
       </Tabs.List>
-      <Tabs.Content value="preview" class="border-border rounded-md border p-4">
+      <Tabs.Content
+        value="preview"
+        class="border-border bg-card rounded-lg border p-4 text-sm leading-6 shadow-sm"
+      >
         Components use semantic CSS variables.
       </Tabs.Content>
-      <Tabs.Content value="code" class="border-border rounded-md border p-4">
+      <Tabs.Content
+        value="code"
+        class="border-border bg-card rounded-lg border p-4 text-sm leading-6 shadow-sm"
+      >
         Variant classes are generated with CVA.
       </Tabs.Content>
-      <Tabs.Content value="tokens" class="border-border rounded-md border p-4">
+      <Tabs.Content
+        value="tokens"
+        class="border-border bg-card rounded-lg border p-4 text-sm leading-6 shadow-sm"
+      >
         Override the --mioyi-* variables in your app.
       </Tabs.Content>
     </Tabs.Root>
