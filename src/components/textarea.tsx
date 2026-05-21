@@ -4,9 +4,9 @@ import { cn } from "../lib/cn";
 
 const textareaVariants = cva(
   [
-    "flex min-h-20 w-full rounded-md border border-input bg-background text-foreground outline-none transition-colors",
+    "border-input bg-background text-foreground flex min-h-20 w-full rounded-md border transition-colors outline-none",
     "placeholder:text-muted-foreground",
-    "focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30",
+    "focus-visible:border-ring focus-visible:ring-ring/30 focus-visible:ring-2",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   {

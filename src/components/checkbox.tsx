@@ -5,7 +5,7 @@ import { splitProps, type ComponentProps, type JSX } from "solid-js";
 import { cn } from "../lib/cn";
 
 const checkboxRootVariants = cva(
-  "group inline-flex items-center gap-2 text-sm text-foreground disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
+  "group text-foreground inline-flex items-center gap-2 text-sm disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
   {
     defaultVariants: {
       size: "md",
@@ -22,8 +22,8 @@ const checkboxRootVariants = cva(
 
 const checkboxControlVariants = cva(
   [
-    "inline-flex shrink-0 items-center justify-center rounded-sm border border-input bg-background text-primary-foreground outline-none transition-colors",
-    "data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2 data-[focus-visible]:ring-offset-background",
+    "border-input bg-background text-primary-foreground inline-flex shrink-0 items-center justify-center rounded-sm border transition-colors outline-none",
+    "data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-background data-[focus-visible]:ring-2 data-[focus-visible]:ring-offset-2",
     "data-[state=checked]:border-primary data-[state=checked]:bg-primary",
     "data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary",
     "data-[invalid]:border-destructive",
@@ -43,7 +43,7 @@ const checkboxControlVariants = cva(
 );
 
 const checkboxIndicatorVariants = cva("flex items-center justify-center");
-const checkboxLabelVariants = cva("select-none leading-none");
+const checkboxLabelVariants = cva("leading-none select-none");
 
 export type CheckboxRootProps = ComponentProps<typeof ArkCheckbox.Root> &
   VariantProps<typeof checkboxRootVariants>;

@@ -6,19 +6,19 @@ import { Portal } from "solid-js/web";
 import { cn } from "../lib/cn";
 
 const dialogBackdropVariants = cva(
-  "fixed inset-0 z-50 bg-foreground/45 data-[state=closed]:animate-out data-[state=open]:animate-in",
+  "bg-foreground/45 data-[state=closed]:animate-out data-[state=open]:animate-in fixed inset-0 z-50",
 );
 const dialogPositionerVariants = cva(
   "fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-4",
 );
 const dialogContentVariants = cva([
-  "relative grid w-full max-w-lg gap-4 rounded-lg border border-border bg-popover p-6 text-popover-foreground shadow-lg outline-none",
+  "border-border bg-popover text-popover-foreground relative grid w-full max-w-lg gap-4 rounded-lg border p-6 shadow-lg outline-none",
   "data-[state=closed]:animate-out data-[state=open]:animate-in",
 ]);
-const dialogTitleVariants = cva("text-lg font-semibold leading-none tracking-normal");
-const dialogDescriptionVariants = cva("text-sm text-muted-foreground");
+const dialogTitleVariants = cva("text-lg leading-none font-semibold tracking-normal");
+const dialogDescriptionVariants = cva("text-muted-foreground text-sm");
 const dialogCloseTriggerVariants = cva(
-  "absolute right-4 top-4 inline-flex size-8 items-center justify-center rounded-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&>svg]:size-4",
+  "text-muted-foreground hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring absolute top-4 right-4 inline-flex size-8 items-center justify-center rounded-sm transition-colors focus-visible:ring-2 focus-visible:outline-none [&>svg]:size-4",
 );
 
 export type DialogRootProps = ComponentProps<typeof ArkDialog.Root>;

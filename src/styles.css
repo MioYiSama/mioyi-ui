@@ -92,6 +92,10 @@
     box-sizing: border-box;
   }
 
+  :where([data-mioyi-ui][hidden]) {
+    display: none !important;
+  }
+
   :where([data-mioyi-ui] *, [data-mioyi-ui] *::before, [data-mioyi-ui] *::after) {
     box-sizing: inherit;
   }

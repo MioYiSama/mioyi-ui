@@ -4,7 +4,7 @@ import { splitProps, type ComponentProps, type JSX } from "solid-js";
 import { cn } from "../lib/cn";
 
 const switchRootVariants = cva(
-  "group inline-flex items-center gap-2 text-sm text-foreground data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
+  "group text-foreground inline-flex items-center gap-2 text-sm data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
   {
     defaultVariants: {
       size: "md",
@@ -20,9 +20,9 @@ const switchRootVariants = cva(
 );
 const switchControlVariants = cva(
   [
-    "inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent bg-input outline-none transition-colors",
+    "bg-input inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent transition-colors outline-none",
     "data-[state=checked]:bg-primary",
-    "data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2 data-[focus-visible]:ring-offset-background",
+    "data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-background data-[focus-visible]:ring-2 data-[focus-visible]:ring-offset-2",
   ],
   {
     defaultVariants: {
@@ -38,7 +38,7 @@ const switchControlVariants = cva(
   },
 );
 const switchThumbVariants = cva(
-  "block rounded-full bg-background shadow-sm transition-transform data-[state=checked]:translate-x-full",
+  "bg-background block rounded-full shadow-sm transition-transform data-[state=checked]:translate-x-full",
   {
     defaultVariants: {
       size: "md",
@@ -52,7 +52,7 @@ const switchThumbVariants = cva(
     },
   },
 );
-const switchLabelVariants = cva("select-none leading-none");
+const switchLabelVariants = cva("leading-none select-none");
 
 export type SwitchRootProps = ComponentProps<typeof ArkSwitch.Root> &
   VariantProps<typeof switchRootVariants>;

@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { splitProps, type ComponentProps } from "solid-js";
 import { cn } from "../lib/cn";
 
-const fieldRootVariants = cva("flex w-full flex-col gap-1.5 text-foreground", {
+const fieldRootVariants = cva("text-foreground flex w-full flex-col gap-1.5", {
   defaultVariants: {
     layout: "vertical",
   },
@@ -16,11 +16,11 @@ const fieldRootVariants = cva("flex w-full flex-col gap-1.5 text-foreground", {
 });
 
 const fieldLabelVariants = cva(
-  "text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+  "text-foreground text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
 );
 
-const fieldHelperTextVariants = cva("text-sm text-muted-foreground");
-const fieldErrorTextVariants = cva("text-sm font-medium text-destructive");
+const fieldHelperTextVariants = cva("text-muted-foreground text-sm");
+const fieldErrorTextVariants = cva("text-destructive text-sm font-medium");
 const fieldRequiredIndicatorVariants = cva("text-destructive");
 
 export type FieldRootProps = ComponentProps<typeof ArkField.Root> &

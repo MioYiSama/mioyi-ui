@@ -11,14 +11,14 @@ import { cn } from "../lib/cn";
 
 export { createListCollection };
 
-const selectRootVariants = cva("flex w-full flex-col gap-1.5 text-foreground");
-const selectLabelVariants = cva("text-sm font-medium leading-none text-foreground");
+const selectRootVariants = cva("text-foreground flex w-full flex-col gap-1.5");
+const selectLabelVariants = cva("text-foreground text-sm leading-none font-medium");
 const selectControlVariants = cva("relative flex w-full items-center");
 const selectTriggerVariants = cva(
   [
-    "flex w-full items-center justify-between gap-2 rounded-md border border-input bg-background px-3 text-sm text-foreground outline-none transition-colors",
+    "border-input bg-background text-foreground flex w-full items-center justify-between gap-2 rounded-md border px-3 text-sm transition-colors outline-none",
     "data-[placeholder-shown]:text-muted-foreground",
-    "data-[focus-visible]:border-ring data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring/30",
+    "data-[focus-visible]:border-ring data-[focus-visible]:ring-ring/30 data-[focus-visible]:ring-2",
     "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:ring-destructive/30",
   ],
@@ -37,17 +37,17 @@ const selectTriggerVariants = cva(
 );
 const selectValueTextVariants = cva("truncate pr-8");
 const selectIndicatorsVariants = cva(
-  "pointer-events-none absolute right-2 flex items-center gap-1 text-muted-foreground",
+  "text-muted-foreground pointer-events-none absolute right-2 flex items-center gap-1",
 );
 const selectIconButtonVariants = cva(
-  "pointer-events-auto inline-flex size-5 items-center justify-center rounded-sm text-muted-foreground transition-colors hover:text-foreground [&>svg]:size-3.5",
+  "text-muted-foreground hover:text-foreground pointer-events-auto inline-flex size-5 items-center justify-center rounded-sm transition-colors [&>svg]:size-3.5",
 );
 const selectContentVariants = cva([
-  "z-50 max-h-72 min-w-[var(--reference-width)] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md outline-none",
+  "border-border bg-popover text-popover-foreground z-50 max-h-72 min-w-[var(--reference-width)] overflow-hidden rounded-md border p-1 shadow-md outline-none",
   "data-[state=open]:animate-in data-[state=closed]:animate-out",
 ]);
 const selectItemVariants = cva([
-  "relative flex cursor-default select-none items-center justify-between gap-2 rounded-sm px-2 py-1.5 text-sm outline-none",
+  "relative flex cursor-default items-center justify-between gap-2 rounded-sm px-2 py-1.5 text-sm outline-none select-none",
   "data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground",
   "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
   "data-[state=checked]:text-primary",
@@ -55,7 +55,7 @@ const selectItemVariants = cva([
 const selectItemTextVariants = cva("truncate");
 const selectItemIndicatorVariants = cva("inline-flex size-4 items-center justify-center");
 const selectItemGroupLabelVariants = cva(
-  "px-2 py-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground",
+  "text-muted-foreground px-2 py-1.5 text-xs font-medium tracking-wide uppercase",
 );
 
 export type SelectRootProps<T extends CollectionItem = CollectionItem> = ArkSelectRootProps<T>;

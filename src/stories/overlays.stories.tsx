@@ -114,13 +114,13 @@ export function Example() {
         <Tabs.Trigger value="code">Code</Tabs.Trigger>
         <Tabs.Trigger value="tokens">Tokens</Tabs.Trigger>
       </Tabs.List>
-      <Tabs.Content value="preview" class="rounded-md border border-border p-4">
+      <Tabs.Content value="preview" class="border-border rounded-md border p-4">
         Components use semantic CSS variables.
       </Tabs.Content>
-      <Tabs.Content value="code" class="rounded-md border border-border p-4">
+      <Tabs.Content value="code" class="border-border rounded-md border p-4">
         Variant classes are generated with CVA.
       </Tabs.Content>
-      <Tabs.Content value="tokens" class="rounded-md border border-border p-4">
+      <Tabs.Content value="tokens" class="border-border rounded-md border p-4">
         Override the --mioyi-* variables in your app.
       </Tabs.Content>
     </Tabs.Root>

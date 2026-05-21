@@ -4,9 +4,9 @@ import { splitProps, type ComponentProps } from "solid-js";
 import { cn } from "../lib/cn";
 
 const tooltipContentVariants = cva(
-  "z-50 max-w-xs rounded-md border border-border bg-popover px-3 py-1.5 text-xs text-popover-foreground shadow-md outline-none data-[state=closed]:animate-out data-[state=open]:animate-in",
+  "border-border bg-popover text-popover-foreground data-[state=closed]:animate-out data-[state=open]:animate-in z-50 max-w-xs rounded-md border px-3 py-1.5 text-xs shadow-md outline-none",
 );
-const tooltipArrowVariants = cva("[--arrow-size:8px] [--arrow-background:var(--mioyi-popover)]");
+const tooltipArrowVariants = cva("[--arrow-background:var(--mioyi-popover)] [--arrow-size:8px]");
 const tooltipArrowTipVariants = cva("border-border bg-popover");
 
 export type TooltipRootProps = ComponentProps<typeof ArkTooltip.Root>;
