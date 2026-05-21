@@ -1,0 +1,98 @@
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+
+@source "./components/**/*.{ts,tsx}";
+@source "./stories/**/*.{ts,tsx}";
+@source "../.storybook/**/*.{ts,tsx}";
+
+@theme inline {
+  --color-background: var(--mioyi-background);
+  --color-foreground: var(--mioyi-foreground);
+  --color-card: var(--mioyi-card);
+  --color-card-foreground: var(--mioyi-card-foreground);
+  --color-popover: var(--mioyi-popover);
+  --color-popover-foreground: var(--mioyi-popover-foreground);
+  --color-primary: var(--mioyi-primary);
+  --color-primary-foreground: var(--mioyi-primary-foreground);
+  --color-secondary: var(--mioyi-secondary);
+  --color-secondary-foreground: var(--mioyi-secondary-foreground);
+  --color-muted: var(--mioyi-muted);
+  --color-muted-foreground: var(--mioyi-muted-foreground);
+  --color-accent: var(--mioyi-accent);
+  --color-accent-foreground: var(--mioyi-accent-foreground);
+  --color-destructive: var(--mioyi-destructive);
+  --color-destructive-foreground: var(--mioyi-destructive-foreground);
+  --color-border: var(--mioyi-border);
+  --color-input: var(--mioyi-input);
+  --color-ring: var(--mioyi-ring);
+  --radius-sm: calc(var(--mioyi-radius) - 4px);
+  --radius-md: calc(var(--mioyi-radius) - 2px);
+  --radius-lg: var(--mioyi-radius);
+  --radius-xl: calc(var(--mioyi-radius) + 4px);
+  --shadow-sm: var(--mioyi-shadow-sm);
+  --shadow-md: var(--mioyi-shadow-md);
+  --shadow-lg: var(--mioyi-shadow-lg);
+}
+
+:root {
+  color-scheme: light;
+  --mioyi-background: var(--color-slate-50);
+  --mioyi-foreground: var(--color-slate-950);
+  --mioyi-card: var(--color-white);
+  --mioyi-card-foreground: var(--color-slate-950);
+  --mioyi-popover: var(--color-white);
+  --mioyi-popover-foreground: var(--color-slate-950);
+  --mioyi-primary: var(--color-blue-600);
+  --mioyi-primary-foreground: var(--color-white);
+  --mioyi-secondary: var(--color-slate-100);
+  --mioyi-secondary-foreground: var(--color-slate-900);
+  --mioyi-muted: var(--color-slate-100);
+  --mioyi-muted-foreground: var(--color-slate-500);
+  --mioyi-accent: var(--color-cyan-50);
+  --mioyi-accent-foreground: var(--color-slate-900);
+  --mioyi-destructive: var(--color-red-600);
+  --mioyi-destructive-foreground: var(--color-white);
+  --mioyi-border: var(--color-slate-200);
+  --mioyi-input: var(--color-slate-200);
+  --mioyi-ring: var(--color-blue-500);
+  --mioyi-radius: 0.5rem;
+  --mioyi-shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.06);
+  --mioyi-shadow-md: 0 8px 24px -12px rgb(15 23 42 / 0.28);
+  --mioyi-shadow-lg: 0 20px 40px -18px rgb(15 23 42 / 0.35);
+
+  @variant dark {
+    color-scheme: dark;
+    --mioyi-background: var(--color-slate-950);
+    --mioyi-foreground: var(--color-slate-50);
+    --mioyi-card: var(--color-slate-900);
+    --mioyi-card-foreground: var(--color-slate-50);
+    --mioyi-popover: var(--color-slate-900);
+    --mioyi-popover-foreground: var(--color-slate-50);
+    --mioyi-primary: var(--color-blue-400);
+    --mioyi-primary-foreground: var(--color-slate-950);
+    --mioyi-secondary: var(--color-slate-800);
+    --mioyi-secondary-foreground: var(--color-slate-100);
+    --mioyi-muted: var(--color-slate-800);
+    --mioyi-muted-foreground: var(--color-slate-400);
+    --mioyi-accent: var(--color-cyan-950);
+    --mioyi-accent-foreground: var(--color-cyan-100);
+    --mioyi-destructive: var(--color-red-400);
+    --mioyi-destructive-foreground: var(--color-red-950);
+    --mioyi-border: var(--color-slate-700);
+    --mioyi-input: var(--color-slate-700);
+    --mioyi-ring: var(--color-blue-300);
+    --mioyi-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.22);
+    --mioyi-shadow-md: 0 12px 28px -14px rgb(0 0 0 / 0.55);
+    --mioyi-shadow-lg: 0 24px 52px -24px rgb(0 0 0 / 0.65);
+  }
+}
+
+@layer base {
+  :where([data-mioyi-ui]) {
+    box-sizing: border-box;
+  }
+
+  :where([data-mioyi-ui] *, [data-mioyi-ui] *::before, [data-mioyi-ui] *::after) {
+    box-sizing: inherit;
+  }
+}
